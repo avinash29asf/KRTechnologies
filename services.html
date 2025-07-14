@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - K R Technologies</title>
+  <style>
+    :root {
+      --primary-color: #ff7a00;
+      --dark-color: #111;
+      --text-light: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url('services.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text-light);
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .logo span {
+      color: var(--primary-color);
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: var(--primary-color);
+      margin: 4px 0;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: white;
+      border-radius: 8px;
+      display: none;
+      flex-direction: column;
+      width: 180px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      color: var(--dark-color);
+    }
+
+    .dropdown-menu a {
+      padding: 12px 20px;
+      text-decoration: none;
+      color: var(--dark-color);
+      border-bottom: 1px solid #eee;
+      font-size: 16px;
+    }
+
+    .dropdown-menu a:hover {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    main {
+      padding-top: 100px;
+      padding-bottom: 60px;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+    }
+
+    .services-section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .services-section h1 {
+      font-size: 40px;
+      color: var(--primary-color);
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .service-box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      color: #f0f0f0;
+      transition: transform 0.3s;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .service-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-box h3 {
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 15px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="logo" />
+    <span>K R Technologies</span>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="dropdown-menu" id="dropdownMenu">
+    <a href="index.html">🏠 Home</a>
+      <a href="services.html">🛠️ Services</a>
+      <a href="products.html">💻 Products</a>
+      <a href="contact.html">📞 Contact</a>
+      <a href="about.html">👤 About</a>
+  </div>
+</header>
+
+<main>
+  <section class="services-section">
+    <h1>Our Services</h1>
+    <div class="grid">
+      <div class="service-box">
+        <h3>✔️ Virus & Spyware Removal</h3>
+        <p>Protect your system with professional virus and malware cleanup.</p>
+      </div>
+      <div class="service-box">
+        <h3>✔️ Troubleshooting / Repair</h3>
+        <p>Fast diagnosis and repair of all hardware/software issues.</p>
+      </div>
+      <div class="service-box">
+        <h3>✔️ Computer Tune Up</h3>
+        <p>Speed up your computer with system optimization services.</p>
+      </div>
+      <div class="service-box">
+        <h3>✔️ Hardware Upgrades</h3>
+        <p>Boost performance with RAM, SSD, and graphics upgrades.</p>
+      </div>
+      <div class="service-box">
+        <h3>✔️ Data Recovery</h3>
+        <p>Recover lost or deleted data from damaged drives or partitions.</p>
+      </div>
+      <div class="service-box">
+        <h3>✔️ Software Installation</h3>
+        <p>OS, MS Office, Antivirus and other licensed software installs.</p>
+      </div>
+      <div class="service-box">
+        <h3>✔️ Hardware Replacement</h3>
+        <p>Replace faulty parts with high-quality genuine components.</p>
+      </div>
+      <div class="service-box">
+        <h3>✔️ Network Setup</h3>
+        <p>LAN/WiFi setup for home & business with security configuration.</p>
+      </div>
+      <div class="service-box">
+        <h3>✔️ Network Design</h3>
+        <p>Structured network planning & implementation for offices.</p>
+      </div>
+      <div class="service-box">
+        <h3>✔️ Laptop Repair</h3>
+        <p>Screen, keyboard, hinge, battery and motherboard repairs.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 K R Technologies | All Rights Reserved</p>
+  <p>📞 8007217007 | 📧 krtechnologiepune@gmail.com</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('dropdownMenu');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  }
+</script>
+
+</body>
+</html>

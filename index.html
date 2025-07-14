@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>K R Technologies</title>
+  <style>
+    :root {
+      --primary-color: #ff7a00;
+      --dark-color: #111;
+      --text-light: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url('home.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text-light);
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .logo span {
+      color: var(--primary-color);
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: var(--primary-color);
+      margin: 4px 0;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: white;
+      border-radius: 8px;
+      display: none;
+      flex-direction: column;
+      width: 180px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      color: var(--dark-color);
+    }
+
+    .dropdown-menu a {
+      padding: 12px 20px;
+      text-decoration: none;
+      color: var(--dark-color);
+      border-bottom: 1px solid #eee;
+      font-size: 16px;
+    }
+
+    .dropdown-menu a:hover {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    main {
+      padding-top: 100px;
+      padding-bottom: 50px;
+      backdrop-filter: blur(4px);
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 800px;
+      margin: auto;
+      animation: slideUp 1s ease;
+    }
+
+    .short-services {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .short-services h3 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+
+    .short-services p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: auto;
+      color: #f0f0f0;
+    }
+
+    .image-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+
+    .image-grid img {
+      width: 280px;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      animation: zoomIn 1s ease;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      font-size: 15px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="logo">
+      <span>K R Technologies</span>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="dropdown-menu" id="dropdownMenu">
+      <a href="index.html">🏠 Home</a>
+      <a href="services.html">🛠️ Services</a>
+      <a href="products.html">💻 Products</a>
+      <a href="contact.html">📞 Contact</a>
+      <a href="about.html">👤 About</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Welcome to K R Technologies</h2>
+      <p>Sales, Service & Networking solutions under one roof. We deliver reliable IT services for computers, laptops, printers, and more.</p>
+    </section>
+
+    <section class="short-services">
+      <h3>What We Do</h3>
+      <p>We provide expert solutions for Virus Removal, Computer Repairs, Data Recovery, Laptop Services, and Network Setup. <br>
+      👉 <a href="services.html" style="color: orange; text-decoration: underline;">View All Services</a></p>
+    </section>
+
+    <div class="image-grid">
+      <img src="repair.jpg" alt="repair">
+      <img src="sales.jpg" alt="sales">
+      <img src="network.jpg" alt="networking">
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 K R Technologies | All Rights Reserved</p>
+    <p>📞 8007217007 | 📧 krtechnologiepune@gmail.com</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('dropdownMenu');
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    }
+  </script>
+
+</body>
+</html>

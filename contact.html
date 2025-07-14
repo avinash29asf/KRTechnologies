@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - K R Technologies</title>
+  <style>
+    :root {
+      --primary-color: #ff7a00;
+      --dark-color: #111;
+      --text-light: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url('contact.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text-light);
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .logo span {
+      color: var(--primary-color);
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: var(--primary-color);
+      margin: 4px 0;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: white;
+      border-radius: 8px;
+      display: none;
+      flex-direction: column;
+      width: 180px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      color: var(--dark-color);
+    }
+
+    .dropdown-menu a {
+      padding: 12px 20px;
+      text-decoration: none;
+      color: var(--dark-color);
+      border-bottom: 1px solid #eee;
+      font-size: 16px;
+    }
+
+    .dropdown-menu a:hover {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    main {
+      padding-top: 100px;
+      padding-bottom: 60px;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+    }
+
+    .contact-section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .contact-section h1 {
+      font-size: 40px;
+      color: var(--primary-color);
+      margin-bottom: 30px;
+    }
+
+    .form-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    form {
+      flex: 1 1 300px;
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+    }
+
+    form button {
+      background: var(--primary-color);
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .map {
+      flex: 1 1 300px;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 15px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="images/logo.png" alt="logo">
+    <span>K R Technologies</span>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="dropdown-menu" id="dropdownMenu">
+    <a href="index.html">🏠 Home</a>
+   
+    <a href="services.html">🛠️ Services</a>
+    <a href="products.html">💻 Products</a>
+    <a href="contact.html">📞 Contact</a>
+    <a href="about.html">👤 About</a>
+  </div>
+</header>
+
+<main>
+  <section class="contact-section">
+    <h1>Contact Us</h1>
+    <div class="form-container">
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7553.511960488036!2d73.7807634!3d18.6135295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9ab06223d49%3A0x59fdb07f1171edca!2sK%20R%20TECHNOLOGIES!5e0!3m2!1sen!2sin!4v1720974500000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 K R Technologies | All Rights Reserved</p>
+  <p>📞 8007217007 | 📧 krtechnologiepune@gmail.com</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('dropdownMenu');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  }
+</script>
+
+</body>
+</html>
